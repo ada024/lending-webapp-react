@@ -12,7 +12,7 @@ function SecureRoute({ component: Component, ...rest }) {
         <Route
           {...rest}
           render={props => {
-            // 1. If not loged in, redirect to login
+            // 1. If not logged in, redirect to login
             if (!auth.isAuthenticated()) return auth.login();
 
             // 3. Render component
